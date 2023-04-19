@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "9e3d6c6c-6f40-4a2c-9c94-fcdb56314204",
+		"name": "WS_AuthTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Por id",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qWzHrggBZFqa3xK3zW11",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "FrontEndPruebas2022",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/SeguridadWebServiceRest/api/empleado/buscarporid/200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SeguridadWebServiceRest",
+						"api",
+						"empleado",
+						"buscarporid",
+						"200"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Todos",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qWzHrggBZFqa3xK3zW11",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "FrontEndPruebas2022",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/SeguridadWebServiceRest/api/empleado/buscartodos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SeguridadWebServiceRest",
+						"api",
+						"empleado",
+						"buscartodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qWzHrggBZFqa3xK3zW11",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "FrontEndPruebas2022",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "juan@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "contraseña",
+							"value": "SoloEstaContrasenaEsCorrecta12345",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/SeguridadWebServiceRest/api/bsc/acceso/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SeguridadWebServiceRest",
+						"api",
+						"bsc",
+						"acceso",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validar",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qWzHrggBZFqa3xK3zW11",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "FrontEndPruebas2022",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/SeguridadWebServiceRest/api/bsc/acceso/valiartoken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SeguridadWebServiceRest",
+						"api",
+						"bsc",
+						"acceso",
+						"valiartoken"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
