@@ -10,14 +10,22 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
          xmlns="http://java.sun.com/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-        http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
     <filter>
         <filter-name>FiltroAuthBasica</filter-name>
         <filter-class>seguridad.filtros.FiltroAuthBasica</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>FiltroAuthBasica</filter-name>
-        <url-pattern>/api/empleado/*</url-pattern>
+        <url-pattern>/api/bsc/acceso/*</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>FiltroAuthTokenJWT</filter-name>
+        <filter-class>seguridad.filtros.FiltroAuthTokenJWT</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FiltroAuthTokenJWT</filter-name>
+        <url-pattern>/api/tkn/*</url-pattern>
     </filter-mapping>
 </web-app>
 

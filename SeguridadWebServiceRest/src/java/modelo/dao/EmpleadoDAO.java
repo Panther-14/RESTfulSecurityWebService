@@ -57,4 +57,27 @@ public class EmpleadoDAO {
         return l;
     }
 
+    public static Empleado login(String email, String contrasena) {
+        Empleado e = null;
+        //--------------------------//
+        try {
+            if (contrasena.compareToIgnoreCase("SoloEstaContrasenaEsCorrecta12345") == 0) {
+                Faker df = new Faker(new Locale("es-MX"));
+                e = new Empleado(
+                        df.number().numberBetween(1, 100000),
+                        df.name().firstName(),
+                        df.name().lastName(),
+                        df.phoneNumber().cellPhone(),
+                        email,
+                        df.address().fullAddress(),
+                        df.internet().password(8, 16, true, true, true)
+                );
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        //--------------------------//
+        return e;
+    }
+
 }

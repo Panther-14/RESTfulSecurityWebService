@@ -16,6 +16,7 @@ public class Respuesta {
     private String mensaje;
     private Empleado empleado;
     private List<Empleado> lista;
+    private SesionToken sesiontoken;
 
     public Respuesta() {
     }
@@ -55,5 +56,13 @@ public class Respuesta {
 
     public void setLista(List<Empleado> lista) {
         this.lista = lista;
+    }
+
+    public SesionToken getSesiontoken() {
+        return sesiontoken;
+    }
+
+    public void setSesiontoken(SesionToken sesiontoken) {
+        this.sesiontoken = sesiontoken;
     }
 }
