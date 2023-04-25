@@ -27,6 +27,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
         <filter-name>FiltroAuthTokenJWT</filter-name>
         <url-pattern>/api/tkn/*</url-pattern>
     </filter-mapping>
+    <filter>
+        <filter-name>FiltroCORS</filter-name>
+        <filter-class>seguridad.filtros.FiltroCORS</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FiltroCORS</filter-name>
+        <url-pattern>/api/*</url-pattern>
+    </filter-mapping>
 </web-app>
 
 
